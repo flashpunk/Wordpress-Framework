@@ -1,7 +1,7 @@
 <?php
 
 // Define File Directores
-$theme_name = get_current_theme();
+$theme_name = wp_get_theme();
 define('THEME_FUNCTIONS', TEMPLATEPATH . '/framework');
 /*
 define('THEME_ADMIN', TEMPLATEPATH . '/framework/admin');
