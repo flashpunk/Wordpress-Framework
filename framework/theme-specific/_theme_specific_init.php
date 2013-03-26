@@ -13,3 +13,6 @@ require_once(TEMPLATEPATH . '/framework/theme-specific/javascript.php');
 
 // Post type loader
 //require_once(TEMPLATEPATH . '/framework/theme-specific/post-types.php');
+
+// Pagenavi
+require_once(TEMPLATEPATH . '/framework/theme-specific/pagenavi.php');
