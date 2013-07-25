@@ -143,28 +143,6 @@ add_filter('body_class', 'category_id_class');
 
 
 
-// posts per page based on CPT - http://mondaybynoon.com/2011/05/16/wordpress-posts-per-page-per-custom-post-type/
-function iti_custom_posts_per_page($query) {
-    switch ( $query->query_vars['post_type'] ) {
-        case 'post':  // Post Type named 'post'
-            $query->query_vars['posts_per_page'] = 7;
-            break;
-        case 'portfolio':  // Post Type named 'portfolio'
-            $query->query_vars['posts_per_page'] = 9;
-            break;
-        case 'resources':  // Post Type named 'resources'
-            $query->query_vars['posts_per_page'] = 6;
-            break;
-        default:
-            break;
-    }
-    return $query;
-}
-if( !is_admin() )
-{ add_filter( 'pre_get_posts', 'iti_custom_posts_per_page' ); }
-
-
-
 // Get the Category Slug by ID
 // http://wordpress.org/support/topic/i-need-to-get-the-category-slug-from-the-category-id?replies=8
 function get_cat_slug($cat_id) {
